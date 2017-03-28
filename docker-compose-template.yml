@@ -1,37 +1,37 @@
 version: '2'
 services:
 
-  §§INSTANCE-seeddms:
-    image: bibbox/seeddms
-    container_name:  §§INSTANCE-seeddms
+  §§INSTANCE-redcap:
+    image: bibbox/redcap
+    container_name:  §§INSTANCE-redcap
     links:
-      - §§INSTANCE-seeddms-db:seeddms-db
+      - §§INSTANCE-redcap-db:redcap-db
     ports:
       - "§§PORT:80"
     depends_on:
-      - §§INSTANCE-seeddms-db
-      - §§INSTANCE-seeddms-data
+      - §§INSTANCE-redcap-db
+      - §§INSTANCE-redcap-data
     volumes_from: 
-      - §§INSTANCE-seeddms-data
+      - §§INSTANCE-redcap-data
 
-  §§INSTANCE-seeddms-db:
+  §§INSTANCE-redcap-db:
     image: mysql:8
-    container_name: §§INSTANCE-seeddms-db
+    container_name: §§INSTANCE-redcap-db
     user: root
     environment:
       - MYSQL_ROOT_PASSWORD=thispasswordisneverusedeveninsidethecontainer
-      - MYSQL_DATABASE=seeddms
-      - MYSQL_USER=seeddms
-      - MYSQL_PASSWORD=seeddms4bibbox
+      - MYSQL_DATABASE=redcap
+      - MYSQL_USER=redcap
+      - MYSQL_PASSWORD=redcap4bibbox
     volumes_from: 
-      - §§INSTANCE-seeddms-data
+      - §§INSTANCE-redcap-data
     depends_on:
-      - §§INSTANCE-seeddms-data
+      - §§INSTANCE-redcap-data
 
-  §§INSTANCE-seeddms-data:
+  §§INSTANCE-redcap-data:
     image: busybox
-    container_name: §§INSTANCE-seeddms-data
+    container_name: §§INSTANCE-redcap-data
     volumes:
       - ./var/lib/mysql:/var/lib/mysql
-      - ./var/www/seeddms50x/data:/var/www/seeddms50x/data
+      - ./var/redcap:/var/www/html
 

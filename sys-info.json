@@ -1,4 +1,4 @@
 {
-  runningcontainers:["§§INSTANCE-seeddms", "§§INSTANCE-seeddms-db"],
-  supportcontainers:["§§INSTANCE-seeddms-data"]    
+  runningcontainers:["§§INSTANCE-redcap", "§§INSTANCE-redcap-db"],
+  supportcontainers:["§§INSTANCE-redcap-data"]    
 }
