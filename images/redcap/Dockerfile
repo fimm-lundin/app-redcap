@@ -58,6 +58,7 @@ RUN php5enmod mcrypt
 # Make a link from /redcap_webroot to the real webroot.  This makes the mapped folder
 RUN ln -s /var/www/html /redcap_webroot
 
+RUN chown -R www-data:www-data /var/www/html
 
 #Environment variables to configure php
 ENV PHP_UPLOAD_MAX_FILESIZE 32M
