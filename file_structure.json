@@ -1,7 +1,7 @@
 {
   "makefolders":[
     "var/lib/mysql",
-    "var/redcap"
+    "www"
   ],
   "copyfiles":[]
 }
