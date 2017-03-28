@@ -34,7 +34,6 @@ RUN docker-php-ext-install gd mysqli pdo pdo_mysql
 
 RUN a2enmod php7 && a2enmod rewrite && a2enmod dav && a2enmod dav_fs
 
-RUN pear install Log && pear channel-discover pear.dotkernel.com/zf1/svn && pear install zend/zend && pear install HTTP_WebDAV_Server-1.0.0RC8 && \
-rm seeddms*
+RUN pear install Log && pear channel-discover pear.dotkernel.com/zf1/svn && pear install zend/zend && pear install HTTP_WebDAV_Server-1.0.0RC8
 
 RUN chown -R www-data:www-data /var/www/html/
