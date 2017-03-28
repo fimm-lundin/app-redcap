@@ -43,5 +43,5 @@ services:
     container_name: §§INSTANCE-redcap-data
     volumes:
       - ./var/lib/mysql:/var/lib/mysql
-      - ./var/redcap:/var/www/html
+      - ./www:/redcap_webroot
 
