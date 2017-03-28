@@ -1,9 +1,16 @@
 version: '2'
-services:
 
+networks:
+    bibbox-default-network:
+      external: true
+
+services:
   §§INSTANCE-redcap:
     image: bibbox/redcap
     container_name:  §§INSTANCE-redcap
+    restart: unless-stopped
+    networks:
+      - bibbox-default-network
     links:
       - §§INSTANCE-redcap-db:redcap-db
     ports:
@@ -17,6 +24,9 @@ services:
   §§INSTANCE-redcap-db:
     image: mysql:8
     container_name: §§INSTANCE-redcap-db
+    restart: unless-stopped
+    networks:
+      - bibbox-default-network
     user: root
     environment:
       - MYSQL_ROOT_PASSWORD=thispasswordisneverusedeveninsidethecontainer
