@@ -65,7 +65,7 @@ ENV PHP_UPLOAD_MAX_FILESIZE 32M
 ENV PHP_POST_MAX_SIZE 32M
 
 # You must escape the / with a blackslash
-ENV PHP_TIMEZONE "America\/Los_Angeles"
+ENV PHP_TIMEZONE "Europe\/Vienna"
 
 # Recommended by REDCap
 ENV PHP_MAX_INPUT_VARS 10000

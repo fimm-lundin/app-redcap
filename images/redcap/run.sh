@@ -9,6 +9,9 @@ sed -ri -e "s/^;?\s?date\.timezone.*/date\.timezone = ${PHP_TIMEZONE}/" /etc/php
 echo "=> Setting max_input_vars"
 sed -ri -e "s/^;?\s?max_input_vars.*/max_input_vars = ${PHP_MAX_INPUT_VARS}/" /etc/php5/apache2/php.ini
 
+echo "=> Setting php sendmail to ssmtp"
+sed -ri -e "s/^;?\s?sendmail_path.*/sendmail_path = \/usr\/sbin\/ssmtp -t/" /etc/php5/apache2/php.ini
+
 echo "=> Configuring CRON"
 crontab -l | { cat; echo "* * * * * php /var/www/html${PHP_REDCAP_FOLDER}cron.php > /dev/null 2>&1"; } | crontab -
 
