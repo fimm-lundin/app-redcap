@@ -5,9 +5,6 @@ MAINTAINER Lukas Pessl <lukas.pessl@medunigraz.at>
 # Install packages
 ENV DEBIAN_FRONTEND noninteractive
 
-# Set DB 'admin' user password to REDCAP
-ENV MYSQL_PASS redcap
-
 # Install packages
 RUN apt-get update && \
   apt-get -y install supervisor \
