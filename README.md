@@ -2,7 +2,7 @@
 
 ## This Readme is still under construction
 
-=== REDCAP INSTALL GUIDE ===
+## === REDCAP INSTALL GUIDE ===
 
 1.) Install app from store
 
@@ -10,8 +10,7 @@
 
 3.) Open the following files with "nano" and comment out everything, except what is mentioned here:
 
-/etc/ssmtp/ssmtp.conf
-=====================
+**/etc/ssmtp/ssmtp.conf**
 rewriteDomain=
 root=YOUR-ADDRESS@gmail.com
 mailhub=smtp.gmail.com:587
@@ -22,8 +21,7 @@ AuthUser=YOUR-ADDRESS@gmail.com
 AuthPass=YOUR-PASSWORD
 
 
-/etc/ssmtp/revaliases
-=====================
+**/etc/ssmtp/revaliases**
 root:YOUR-ADDRESS@gmail.com:smtp.gmail.com:587
 localusername:YOUR-ADDRESS@gmail.com:smtp.gmail.com:587
 
@@ -37,10 +35,9 @@ localusername:YOUR-ADDRESS@gmail.com:smtp.gmail.com:587
 
 6.) Edit the "database.php" file:
 
-database.php
-============
+**database.php**
 $hostname 	= 'redcap-db';
-$db 		= 'redcap';
+$db 		    = 'redcap';
 $username 	= 'redcap';
 $password 	= 'redcap4bibbox';
 
