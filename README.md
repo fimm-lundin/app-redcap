@@ -1,7 +1,5 @@
 # RedCap BIBBOX application
 
-## This Readme is still under construction
-
 ## === REDCAP INSTALL GUIDE ===
 
 1.) Install app from store
@@ -65,13 +63,10 @@
 
 12.) Within the RedCap installation steps click on the configuration checker link.
 
-13.) All but 3 fields should be green. One of the red fields is "Test 6" which is used for testing the cron job. Click on its link "Go to Cron Jobs page".
+13.) Most of the fields should be green now and RedCap is ready to go!
 
-14.) On this page there is a link beneath "Trigger REDCap cron job in a web browser". Click it and the cron job will be triggered.
-
-15.) That's it!
+14.) That's it!
 
 
 Notes:
-- Cronjob should work automatically, need to check this. Is related to subdirectory "redcap".
 - Folder permissions at 777 should generally be avoided. Necessary for RedCap?
