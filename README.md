@@ -37,10 +37,10 @@
 
       // database.php
       
-      $hostname 	= 'redcap-db';
-      $db 		    = 'redcap';
-      $username 	= 'redcap';
-      $password 	= 'redcap4bibbox';
+      $hostname     = 'redcap-db';
+      $db           = 'redcap';
+      $username     = 'redcap';
+      $password     = 'redcap4bibbox';
 
       $salt = 'RANDOM-8-DIGIT-STRING';
 
