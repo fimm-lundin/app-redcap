@@ -69,10 +69,10 @@ ENV PHP_MAX_INPUT_VARS 10000
 
 # What directory in the mounted redcap_webroot folder does redcap reside in - should be "/" or "/redcap/" in most cases...
 # This is used to set the cron task
-ENV PHP_REDCAP_FOLDER "/"
+ENV PHP_REDCAP_FOLDER "/redcap/"
 
 # Assumes REDCap is one dir down
-ENV PHP_CRON_COMMAND "php /redcap_webroot/cron.php"
+# ENV PHP_CRON_COMMAND "php /redcap_webroot/cron.php"
 
 # Add mappable volumes
 VOLUME [ "/redcap_webroot", "/var/log/export" ]
