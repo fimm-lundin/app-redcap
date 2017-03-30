@@ -10,7 +10,8 @@
 
 3.) Open the following files with "nano" and comment out everything, except what is mentioned here:
 
-    **/etc/ssmtp/ssmtp.conf**
+    # /etc/ssmtp/ssmtp.conf
+    
     rewriteDomain=
     root=YOUR-ADDRESS@gmail.com
     mailhub=smtp.gmail.com:587
@@ -20,7 +21,9 @@
     AuthUser=YOUR-ADDRESS@gmail.com
     AuthPass=YOUR-PASSWORD
 
-    **/etc/ssmtp/revaliases**
+
+    # /etc/ssmtp/revaliases
+    
     root:YOUR-ADDRESS@gmail.com:smtp.gmail.com:587
     localusername:YOUR-ADDRESS@gmail.com:smtp.gmail.com:587
 
@@ -34,13 +37,14 @@
 
 6.) Edit the "database.php" file:
 
-**database.php**
-$hostname 	= 'redcap-db';
-$db 		    = 'redcap';
-$username 	= 'redcap';
-$password 	= 'redcap4bibbox';
+      // database.php
+      
+      $hostname 	= 'redcap-db';
+      $db 		    = 'redcap';
+      $username 	= 'redcap';
+      $password 	= 'redcap4bibbox';
 
-$salt = 'RANDOM-8-DIGIT-STRING';
+      $salt = 'RANDOM-8-DIGIT-STRING';
 
 
 7.) Set permissions for "edocs" and "temp" folders to 777. -> Maybe we can have sth else here later on
@@ -51,10 +55,10 @@ $salt = 'RANDOM-8-DIGIT-STRING';
 
 10.) Install an Adminer application from the store within your BIBBOX and connect to the RedCap database:
 
-  Server: YOUR-REDCAP-ID-redcap-db
-  Username: redcap
-  Password: redcap4bibbox
-  Database: redcap
+  * Server: YOUR-REDCAP-ID-redcap-db
+  * Username: redcap
+  * Password: redcap4bibbox
+  * Database: redcap
 
 
 11.) In Adminer go to "SQL-command" and copy the SQL code from RedCap installation into the Adminer SQL field. Then execute and wait.
