@@ -10,23 +10,22 @@
 
 3.) Open the following files with "nano" and comment out everything, except what is mentioned here:
 
-**/etc/ssmtp/ssmtp.conf**
-rewriteDomain=
-root=YOUR-ADDRESS@gmail.com
-mailhub=smtp.gmail.com:587
-hostname=smtp.gmail.com
-FromLineOverride=YES
-UseSTARTTLS=YES
-AuthUser=YOUR-ADDRESS@gmail.com
-AuthPass=YOUR-PASSWORD
+  **/etc/ssmtp/ssmtp.conf**
+    rewriteDomain=
+    root=YOUR-ADDRESS@gmail.com
+    mailhub=smtp.gmail.com:587
+    hostname=smtp.gmail.com
+    FromLineOverride=YES
+    UseSTARTTLS=YES
+    AuthUser=YOUR-ADDRESS@gmail.com
+    AuthPass=YOUR-PASSWORD
+
+  **/etc/ssmtp/revaliases**
+    root:YOUR-ADDRESS@gmail.com:smtp.gmail.com:587
+    localusername:YOUR-ADDRESS@gmail.com:smtp.gmail.com:587
 
 
-**/etc/ssmtp/revaliases**
-root:YOUR-ADDRESS@gmail.com:smtp.gmail.com:587
-localusername:YOUR-ADDRESS@gmail.com:smtp.gmail.com:587
-
-
-**Make sure you have saved the files, then restart the RedCap app from the BIBBOX app dashboard!**
+  **Make sure you have saved the files, then restart the RedCap app from the BIBBOX app dashboard!**
 
 
 4.) Open up FileZilla or similar FTP tool and connect to your BIBBOX.
@@ -52,10 +51,10 @@ $salt = 'RANDOM-8-DIGIT-STRING';
 
 10.) Install an Adminer application from the store within your BIBBOX and connect to the RedCap database:
 
-Server: YOUR-REDCAP-ID-redcap-db
-Username: redcap
-Password: redcap4bibbox
-Database: redcap
+  Server: YOUR-REDCAP-ID-redcap-db
+  Username: redcap
+  Password: redcap4bibbox
+  Database: redcap
 
 
 11.) In Adminer go to "SQL-command" and copy the SQL code from RedCap installation into the Adminer SQL field. Then execute and wait.
