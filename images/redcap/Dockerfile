@@ -41,7 +41,7 @@ ADD apache_default /etc/apache2/sites-available/000-default.conf
 RUN a2enmod rewrite
 
 # Add readme as a dummy html file in case someone forgets to map the redcap_webroot
-ADD README.md /var/www/html/index.html
+# ADD README.md /var/www/html/index.html
 
 
 # enable mcrypt
