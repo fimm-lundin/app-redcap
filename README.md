@@ -10,7 +10,7 @@
 
 3.) Open the following files with "nano" and comment out everything, except what is mentioned here:
 
-  **/etc/ssmtp/ssmtp.conf**
+    **/etc/ssmtp/ssmtp.conf**
     rewriteDomain=
     root=YOUR-ADDRESS@gmail.com
     mailhub=smtp.gmail.com:587
@@ -20,7 +20,7 @@
     AuthUser=YOUR-ADDRESS@gmail.com
     AuthPass=YOUR-PASSWORD
 
-  **/etc/ssmtp/revaliases**
+    **/etc/ssmtp/revaliases**
     root:YOUR-ADDRESS@gmail.com:smtp.gmail.com:587
     localusername:YOUR-ADDRESS@gmail.com:smtp.gmail.com:587
 
