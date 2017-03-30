@@ -62,14 +62,14 @@ ENV PHP_UPLOAD_MAX_FILESIZE 32M
 ENV PHP_POST_MAX_SIZE 32M
 
 # You must escape the / with a blackslash
-ENV PHP_TIMEZONE "Europe\/Vienna"
+ENV PHP_TIMEZONE "America\/Los_Angeles"
 
 # Recommended by REDCap
 ENV PHP_MAX_INPUT_VARS 10000
 
 # What directory in the mounted redcap_webroot folder does redcap reside in - should be "/" or "/redcap/" in most cases...
 # This is used to set the cron task
-ENV PHP_REDCAP_FOLDER "/redcap/"
+ENV PHP_REDCAP_FOLDER "/"
 
 # Assumes REDCap is one dir down
 # ENV PHP_CRON_COMMAND "php /redcap_webroot/cron.php"
