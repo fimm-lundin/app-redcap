@@ -72,7 +72,7 @@ ENV PHP_MAX_INPUT_VARS 10000
 ENV PHP_REDCAP_FOLDER "/"
 
 # Assumes REDCap is one dir down
-# ENV PHP_CRON_COMMAND "php /redcap_webroot/redcap/cron.php"
+ENV PHP_CRON_COMMAND "php /redcap_webroot/cron.php"
 
 # Add mappable volumes
 VOLUME [ "/redcap_webroot", "/var/log/export" ]
