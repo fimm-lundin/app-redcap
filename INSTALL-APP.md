@@ -44,7 +44,7 @@ and
       $salt = 'RANDOM-8-DIGIT-STRING';
 
 
-7.) Set permissions for `edocs` and `temp` folders to 777. -> Maybe we can have sth else here later on
+7.) Set permissions for `edocs` and `temp` folders to 777. 
 
 8.) Now open up the RedCap app from your BIBBOX and append `/install.php` to the URL.
 
@@ -75,12 +75,6 @@ and
 14.) That's it!
 
 ![5](install-screen-05.jpg)
-
-
-Notes:
-
-- Folder permissions at 777 should generally be avoided. Is this really necessary for RedCap?
-
 
 
 
