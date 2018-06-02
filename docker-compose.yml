@@ -1,29 +1,25 @@
 version: '2'
 
-networks:
-    bibbox-default-network:
-      external: true
-
 services:
-  §§INSTANCE-redcap:
+  bibbox-redcap:
     image: bibbox/redcap
-    container_name:  §§INSTANCE-redcap
+    container_name:  bibbox-redcap
     restart: unless-stopped
     networks:
       - bibbox-default-network
     links:
-      - §§INSTANCE-redcap-db:redcap-db
+      - bibbox-redcap-db:redcap-db
     ports:
-      - "§§PORT:80"
+      - "8065:80"
     depends_on:
-      - §§INSTANCE-redcap-db
-      - §§INSTANCE-redcap-data
+      - bibbox-redcap-db
+      - bibbox-redcap-data
     volumes_from: 
-      - §§INSTANCE-redcap-data
+      - bibbox-redcap-data
 
-  §§INSTANCE-redcap-db:
+  bibbox-redcap-db:
     image: mysql:8
-    container_name: §§INSTANCE-redcap-db
+    container_name: bibbox-redcap-db
     restart: unless-stopped
     networks:
       - bibbox-default-network
@@ -34,13 +30,13 @@ services:
       - MYSQL_USER=redcap
       - MYSQL_PASSWORD=redcap4bibbox
     volumes_from: 
-      - §§INSTANCE-redcap-data
+      - bibbox-redcap-data
     depends_on:
-      - §§INSTANCE-redcap-data
+      - bibbox-redcap-data
 
-  §§INSTANCE-redcap-data:
+  bibbox-redcap-data:
     image: busybox
-    container_name: §§INSTANCE-redcap-data
+    container_name: bibbox-redcap-data
     volumes:
       - ./data/var/lib/mysql:/var/lib/mysql
       - ./data/www:/redcap_webroot
