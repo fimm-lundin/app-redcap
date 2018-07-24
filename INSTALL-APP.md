@@ -30,7 +30,7 @@ and
 
 4.) Open up FileZilla or similar FTP tool and connect to your BIBBOX.
 
-5.) Navigate to `/opt/bibbox/application-instance/YOUR-REDCAP-ID-app-redcap/www` and copy all contents of RedCap source files (`redcap7.zip/redcap/*`) to this directory via FTP.
+5.) Navigate to `/opt/bibbox/application-instance/YOUR-REDCAP-ID-app-redcap/data/www` and copy all contents of RedCap source files (`redcap7.zip/redcap/*`) to this directory via FTP.
 
 6.) Edit the `database.php` file and replace **RANDOM-8-DIGIT-STRING** with any random string of at least 8 capital letters or numbers:
 
